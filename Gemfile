@@ -27,6 +27,7 @@ gem "thruster", require: false
 
 # Custom Gems
 gem "jsbundling-rails", "~> 1.3"
+gem "rack-cors"
 gem "tailwindcss-ruby"
 gem "tailwindcss-rails"
 
@@ -35,6 +36,7 @@ gem "tailwindcss-rails"
 
 group :development, :test do
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
+  gem "dotenv"
   gem "brakeman", require: false
   gem "rubocop-rails-omakase", require: false
   gem "rspec-rails", "~> 8.0.0"
