@@ -1,16 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 function Posts() {
   const [posts, setPosts] = useState([]);
 
+  // @ts-ignore
   async function getData() {
-    const url = "http://127.0.0.1:3000/posts";
+    const url = "/posts";
+
     try {
       const response = await fetch(url, {
         headers: {
           "Content-Type": "application/json",
         },
       });
+
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
